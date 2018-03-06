@@ -9,7 +9,7 @@ class FileLoader
   end
 
   def load_file(filename)
-   CSV.foreach("event_attendees.csv", headers: true, header_converters: :symbol) do |row|
+   CSV.foreach('./data/event_attendees.csv', headers: true, header_converters: :symbol) do |row|
     end
   end
 
