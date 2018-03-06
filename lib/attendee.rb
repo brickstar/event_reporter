@@ -21,6 +21,6 @@ class Attendee
     @city = data[:city]
     @state = data[:state]
     @zipcode = data[:zipcode]
-
   end
+  
 end
