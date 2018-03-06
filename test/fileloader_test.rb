@@ -18,5 +18,5 @@ class FileLoaderTest < Minitest::Test
     assert_nil fl.load_file('./data/event_attendees.csv')
   end
 
-
+  
 end

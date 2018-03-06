@@ -1,5 +1,6 @@
 require 'pry'
 require 'csv'
+require_relative 'attendee'
 
 class FileLoader
 
@@ -8,10 +9,11 @@ class FileLoader
     @attendees = []
   end
 
-  def load_file(filename)
-   CSV.foreach('./data/event_attendees.csv', headers: true, header_converters: :symbol) do |row|
+  def load_file(filename = './data/event_attendees.csv')
+   CSV.foreach(filename, headers: true, header_converters: :symbol) do |data|
+     binding.pry
+     @attendees << Attendee.new(data)
     end
   end
-
 
 end
