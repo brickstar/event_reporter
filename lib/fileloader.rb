@@ -1,7 +1,6 @@
 require 'pry'
 require 'csv'
 require_relative 'attendee'
-# require_relative 'queue'
 
 class FileLoader
 

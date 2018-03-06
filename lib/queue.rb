@@ -9,8 +9,12 @@ class Q
     @queue.clear
   end
 
+  def add(attendee)
+    @queue << attendee
+  end
+
   def print
-    
+
   end
 
   def print_by(attribute)

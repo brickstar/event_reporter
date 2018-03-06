@@ -1,4 +1,5 @@
 require './lib/queue'
+require './lib/attendee'
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'pry'
@@ -24,9 +25,36 @@ class QTest < Minitest::Test
     assert_equal 0, q.queue.length
   end
 
+  def test_it_can_add_to_the_queue
+    q = Q.new
+    amanda = Attendee.new({ id: '19',
+                            regdate: '11/23/08 20:44',
+                            first_name: 'Amanda',
+                            last_name: 'Hartzell',
+                            email_address: 'nqm17@jumpstartlab.com',
+                            homephone: '607-280-2000',
+                            street: '3515 School St',
+                            city: 'Valois',
+                            state: 'NY',
+                            zipcode: '14841' })
+    q.add(amanda)
+
+    assert_equal 1, q.queue.length
+  end
+
   def test_it_can_clear_queue
     q = Q.new
-    q.queue.push [55]
+    amanda = Attendee.new({ id: '19',
+                            regdate: '11/23/08 20:44',
+                            first_name: 'Amanda',
+                            last_name: 'Hartzell',
+                            email_address: 'nqm17@jumpstartlab.com',
+                            homephone: '607-280-2000',
+                            street: '3515 School St',
+                            city: 'Valois',
+                            state: 'NY',
+                            zipcode: '14841' })
+    q.add(amanda)
 
     assert_equal 1, q.queue.length
 
