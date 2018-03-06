@@ -6,13 +6,12 @@ require 'pry'
 class AttendeeTest < Minitest::Test
 
   def setup
-
     @amanda = Attendee.new({ id: '19',
                              regdate: '11/23/08 20:44',
                              first_name: 'Amanda',
                              last_name: 'Hartzell',
                              email_address: 'nqm17@jumpstartlab.com',
-                             home_phone: '607-280-2000',
+                             homephone: '607-280-2000',
                              street: '3515 School St',
                              city: 'Valois',
                              state: 'NY',
@@ -44,7 +43,7 @@ class AttendeeTest < Minitest::Test
   end
 
   def test_home_phone
-    assert_equal '607-280-2000', @amanda.home_phone
+    assert_equal '607-280-2000', @amanda.homephone
   end
 
   def test_street

@@ -4,7 +4,7 @@ class Attendee
               :first_name,
               :last_name,
               :email_address,
-              :home_phone,
+              :homephone,
               :street,
               :city,
               :state,
@@ -16,11 +16,11 @@ class Attendee
     @first_name = data[:first_name]
     @last_name = data[:last_name]
     @email_address = data[:email_address]
-    @home_phone = data[:home_phone]
+    @homephone = data[:homephone]
     @street = data[:street]
     @city = data[:city]
     @state = data[:state]
     @zipcode = data[:zipcode]
   end
-  
+
 end
