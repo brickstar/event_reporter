@@ -3,6 +3,7 @@ class Attendee
               :regdate,
               :first_name,
               :last_name,
+              :email_address,
               :home_phone,
               :street,
               :city,
