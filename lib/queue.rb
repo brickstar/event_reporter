@@ -18,13 +18,13 @@ class Q
   end
 
   def print_headers
-    "LAST NAME\tFIRST NAME\tEMAIL\tZIPCODE\tCITY\tSTATE\tADDRESS\tPHONE\tDISTRICT"
+      "LAST NAME\tFIRST NAME\tEMAIL\tZIPCODE\tCITY\tSTATE\tADDRESS\tPHONE\tDISTRICT"
   end
 
   def print_stuff
     puts print_headers
     queue.find_all do |attendee|
-      puts "#{attendee.last_name}\t#{attendee.first_name}\t#{attendee.email_address}\t#{attendee.city}\t#{attendee.state}\t#{attendee.street}\t#{attendee.homephone}\tDISTRICT"
+      puts "#{attendee.last_name}\t#{attendee.first_name}\t #{attendee.email_address}\t #{attendee.city}\t #{attendee.state}\t #{attendee.street}\t #{attendee.homephone}\tDISTRICT"
     end
   end
 

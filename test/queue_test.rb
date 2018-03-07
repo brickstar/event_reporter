@@ -99,15 +99,15 @@ class QTest < Minitest::Test
                             zipcode: '14841' })
 
     dingleberry = Attendee.new({ id: '20',
-                             regdate: '12/24/09 21:44',
-                             first_name: 'Dingle',
-                             last_name: 'Berry',
-                             email_address: 'dingle@dingle.com',
-                             homephone: '555-867-5309',
-                             street: '321 Bebop St',
-                             city: 'Denver',
-                             state: 'CO',
-                             zipcode: '80218' })
+                                 regdate: '12/24/09 21:44',
+                                 first_name: 'Dingle',
+                                 last_name: 'Berry',
+                                 email_address: 'dingle@dingle.com',
+                                 homephone: '555-867-5309',
+                                 street: '321 Bebop St',
+                                 city: 'Denver',
+                                 state: 'CO',
+                                 zipcode: '80218' })
     q.add(amanda)
     q.add(dingleberry)
 binding.pry
