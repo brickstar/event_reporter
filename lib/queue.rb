@@ -1,6 +1,6 @@
 class Q
-  attr_reader :queue,
-              :counter
+  attr_reader :queue
+
   def initialize
     @queue = []
   end
