@@ -12,7 +12,7 @@ module PrintFormatter
     end
   end
 
-  def create_line(words, length)
+  def create_table(words, length)
     words.map do |word| word.ljust(length)
     end.join(" ")
   end

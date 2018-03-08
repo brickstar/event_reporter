@@ -8,6 +8,6 @@ require 'pry'
 class DataCleanerTest < Minitest::Test
 
   def test_clean_zipcodes
-    dc = data
+    dc = Data
   end
 end

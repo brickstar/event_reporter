@@ -26,9 +26,9 @@ class Q
 
   def print_stuff
     max_character = find_max_characters
-      puts create_line(headers, max_character)
+      puts create_table(headers, max_character)
     create_attendee_array.each do |attendee|
-      puts create_line(attendee, max_character)
+      puts create_table(attendee, max_character)
     end
   end
 
