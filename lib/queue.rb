@@ -40,7 +40,8 @@ class Q
   end
 
   def create_line(words, length)
-    words.map { |word| word.ljust(length) }.join(" ")
+    words.map do |word| word.ljust(length)
+    end.join(" ")
   end
 
   def find_max_characters
