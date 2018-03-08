@@ -87,16 +87,16 @@ class QTest < Minitest::Test
   end
   def test_print_stuff
     q = Q.new
-    amanda = Attendee.new({ id: '19',
-                            regdate: '11/23/08 20:44',
-                            first_name: 'Amanda',
-                            last_name: 'Hartzell',
-                            email_address: 'nqm17@jumpstartlab.com',
-                            homephone: '607-280-2000',
-                            street: '3515 School St',
-                            city: 'Valois',
-                            state: 'NY',
-                            zipcode: '14841' })
+    heidi = Attendee.new({ id: '19',
+                          regdate: '11/23/08 20:44',
+                          first_name: 'Heidi',
+                          last_name: 'Johnson',
+                          email_address: 'hdj@gmail.com',
+                          homephone: '607-280-2000',
+                          street: '3515 School St',
+                          city: 'Valois',
+                          state: 'NY',
+                          zipcode: '14841' })
 
     dingleberry = Attendee.new({ id: '20',
                                  regdate: '12/24/09 21:44',
@@ -108,8 +108,22 @@ class QTest < Minitest::Test
                                  city: 'Denver',
                                  state: 'CO',
                                  zipcode: '80218' })
-    q.add(amanda)
+
+    larry = Attendee.new({ id: '454',
+                          regdate: '12/24/09 21:44',
+                          first_name: 'Larry',
+                          last_name: 'Jinglebum',
+                          email_address: 'larry@vjvjvjvvjzk.com',
+                          homephone: '555-444-4444',
+                          street: '321 Bop St',
+                          city: 'Idunno',
+                          state: 'ID',
+                          zipcode: '44418' })
+
+    q.add(heidi)
     q.add(dingleberry)
-binding.pry
-  end
+    q.add(larry)
+    binding.pry
+    assert_equal ["Johnson\tHeidi\thdj@gmail.com\tValois\tNY\t3515 School St\t607-280-2000\tDISTRICT", "Berry\tDingle\tdingle@dingle.com\tDenver\tCO\t321 Bebop St\t555-867-5309\tDISTRICT", "Jinglebum\tLarry\tlarry@fdksafj.com\tIdunno\tID\t321 Bop St\t555-444-4444\tDISTRICT"], q.print_stuff
+   end
 end

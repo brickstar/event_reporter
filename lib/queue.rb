@@ -17,17 +17,37 @@ class Q
 
   end
 
-  def print_headers
-      "LAST NAME\tFIRST NAME\tEMAIL\tZIPCODE\tCITY\tSTATE\tADDRESS\tPHONE\tDISTRICT"
+  def headers
+    ["LAST NAME", "FIRST NAME", "EMAIL", "ZIPCODE", "CITY", "STATE", "ADDRESS", "PHONE", "DISTRICT"]
   end
 
   def print_stuff
-    puts print_headers
-    queue.find_all do |attendee|
-      puts "#{attendee.last_name}\t#{attendee.first_name}\t #{attendee.email_address}\t #{attendee.city}\t #{attendee.state}\t #{attendee.street}\t #{attendee.homephone}\tDISTRICT"
+    max_character = find_max_characters
+    puts create_line(headers, max_character)
+    create_attendee_array.each do |attendee|
+      puts create_line(attendee, max_character)
     end
   end
 
+  def create_attendee_array
+    queue.map do |attendee|
+      [attendee.last_name, attendee.first_name, attendee.email_address, attendee.zipcode, attendee.city, attendee.state, attendee.street, attendee.homephone, "DISTRICT"]
+    end
+  end
+
+  def create_line(words, length)
+    words.map { |word| word.ljust(length) }.join(" ")
+  end
+
+  def find_max_characters
+    create_attendee_array.flatten.reduce(0) do |length, string|
+      if string.length > length
+        string.length
+      else
+        length
+      end
+    end
+  end
 
   def print_by(attribute)
 
