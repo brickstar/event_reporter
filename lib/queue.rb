@@ -1,7 +1,7 @@
 require_relative 'print_formatter'
 
 class Q
-  include PrintFormatter
+  # include PrintFormatter
   attr_reader :queue
 
   def initialize
