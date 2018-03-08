@@ -1,7 +1,7 @@
 require_relative 'print_formatter'
 
 class Q
-  # include PrintFormatter
+  include PrintFormatter
   attr_reader :queue
 
   def initialize
@@ -26,9 +26,9 @@ class Q
 
   def print_stuff
     max_character = find_max_characters
-      create_line(headers, max_character)
+      puts create_line(headers, max_character)
     create_attendee_array.each do |attendee|
-      create_line(attendee, max_character)
+      puts create_line(attendee, max_character)
     end
   end
 

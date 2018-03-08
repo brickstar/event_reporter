@@ -142,7 +142,7 @@ class QTest < Minitest::Test
     q.add(heidi)
     q.add(dingleberry)
     q.add(larry)
-
+binding.pry
     assert_equal [["Johnson", "Heidi", "hdj@gmail.com", "14841", "Valois", "NY", "3515 School St", "607-280-2000", "DISTRICT"], ["Berry", "Dingle", "dingle@dingle.com", "80218", "Denver", "CO", "321 Bebop St", "555-867-5309", "DISTRICT"], ["Jinglebum", "Larry", "larry@vjvjvjvvjzk.com", "44418", "Idunno", "ID", "321 Bop St", "555-444-4444", "DISTRICT"]], q.print_stuff
    end
 

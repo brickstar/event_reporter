@@ -18,13 +18,20 @@ module PrintFormatter
   end
 
   def find_max_characters
-    create_attendee_array.flatten.reduce(0) do |length, string|
-      if string.length > length
-        string.length
-      else
-        length
-      end
+    max_characters = create_attendee_array.flatten.max_by do |string|
+      string.length
     end
+    max_characters.length
   end
+
+  # def find_max_characters #reduce
+    # create_attendee_array.flatten.reduce(0) do |length, string|
+    #   if string.length > length
+    #     string.length
+    #   else
+    #     length
+    #   end
+    # end
+  # end
 
 end

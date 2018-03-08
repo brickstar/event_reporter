@@ -95,7 +95,7 @@ class PrintFormatterTest < Minitest::Test
     q.add(larry)
 
     assert_equal 21, q.find_max_characters
-
+binding.pry
     big_larry = Attendee.new({ id: '454',
                           regdate: '12/24/09 21:44',
                           first_name: 'Larry',
