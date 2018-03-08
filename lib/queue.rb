@@ -9,6 +9,10 @@ class Q
     @queue.clear
   end
 
+  def count
+    @queue.length
+  end
+
   def add(data)
     @queue << data
   end
@@ -23,9 +27,9 @@ class Q
 
   def print_stuff
     max_character = find_max_characters
-    puts create_line(headers, max_character)
+      create_line(headers, max_character)
     create_attendee_array.each do |attendee|
-      puts create_line(attendee, max_character)
+      create_line(attendee, max_character)
     end
   end
 
@@ -53,7 +57,4 @@ class Q
 
   end
 
-  def count
-    @queue.length
-  end
 end
