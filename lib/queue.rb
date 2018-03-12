@@ -1,4 +1,5 @@
 require_relative 'print_formatter'
+# require_relative 'attendee'
 
 class Q
   include PrintFormatter
@@ -16,8 +17,8 @@ class Q
     @queue.length
   end
 
-  def add(data)
-    @queue << data
+  def add(attendee)
+    @queue << attendee
   end
 
   def find(attribute, criteria)
@@ -26,14 +27,28 @@ class Q
 
   def print_stuff
     max_character = find_max_characters
-      puts create_table(headers, max_character)
+      create_table(headers, max_character)
     create_attendee_array.each do |attendee|
-      puts create_table(attendee, max_character)
+      create_table(attendee, max_character)
     end
   end
 
-  def print_by(attribute)
+  def print_first_name
+    @queue.map do |attendee|
+      attendee.first_name
+    end
+  end
 
+  def print_last_name
+    @queue.map do |attendee|
+      attendee.last_name
+    end
+  end
+
+  def print_id
+    @queue.map do |attendee|
+      attendee.id
+    end
   end
 
 end

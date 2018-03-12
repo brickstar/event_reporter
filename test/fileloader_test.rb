@@ -20,5 +20,5 @@ class FileLoaderTest < Minitest::Test
     assert_equal "14018685000", attendees[10].homephone
     assert_equal "NY", attendees[-1].state
   end
-
+  
 end
