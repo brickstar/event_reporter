@@ -33,6 +33,18 @@ class Q
     end
   end
 
+  def print_id
+    @queue.map do |attendee|
+      attendee.id
+    end
+  end
+
+  def print_regdate
+    @queue.map do |attendee|
+      attendee.regdate
+    end
+  end
+
   def print_first_name
     @queue.map do |attendee|
       attendee.first_name
@@ -45,9 +57,39 @@ class Q
     end
   end
 
-  def print_id
+  def print_email_address
     @queue.map do |attendee|
-      attendee.id
+      attendee.email_address
+    end
+  end
+
+  def print_phone_number
+    @queue.map do |attendee|
+      attendee.homephone
+    end
+  end
+
+  def print_street
+    @queue.map do |attendee|
+      attendee.street
+    end
+  end
+
+  def print_city
+    @queue.map do |attendee|
+      attendee.city
+    end
+  end
+
+  def print_state
+    @queue.map do |attendee|
+      attendee.state
+    end
+  end
+  
+  def print_zipcode
+    @queue.map do |attendee|
+      attendee.zipcode
     end
   end
 
